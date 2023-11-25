@@ -59,6 +59,7 @@
   & .quick-toggle-arrow {
     padding: $base_padding $base_padding*1.75;
     border-width: 0;
+    border-color: transparentize($fg_color, .75);
 
     &:checked {
       @include button(default, $c:$selected_bg_color);
@@ -112,15 +113,10 @@
       border-radius: 999px;
       padding: 1.5 * $base_padding;
       background-color: transparentize($fg_color, 0.8);
-      @if $variant == 'light' {
-      	border: 0.5px solid $borders_color;
-      	background-color: white;
-      	}
 
       &.active {
         background-color: $selected_bg_color;
         color: $selected_fg_color;
-        border-color: transparent;
       }
     }
 
@@ -167,6 +163,16 @@
 }
 
 .device-subtitle { color: transparentize($fg_color, 0.5); }
+
+.keyboard-brightness-item .slider {
+  min-height: 16px;
+}
+
+.keyboard-brightness-level {
+  spacing: $base_padding;
+
+  .button:checked { @include button(default, $c:$selected_bg_color); }
+}
 
 // background apps
 

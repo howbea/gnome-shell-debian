@@ -1,7 +1,7 @@
 /* Dash */
 
 // uses system colors
-$dash_background_color: if($variant == 'light', transparentize($bg_color, .85), $system_overlay_bg_color);
+$dash_background_color: $system_overlay_bg_color;
 
 $dash_placeholder_size: 32px;
 $dash_padding: $base_padding*2; // 12px
