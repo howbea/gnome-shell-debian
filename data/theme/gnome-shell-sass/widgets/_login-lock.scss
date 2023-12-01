@@ -25,6 +25,7 @@ $_gdm_dialog_width: 23em;
   &.login-dialog-session-list-button {
     @extend .icon-button;
     @extend %system_button;
+    @if $variant == 'light' {background-color: transparentize($_gdm_fg, .9); &:hover, &:active { background-color: transparentize($_gdm_fg, .8); }}
   }
 
   &.cancel-button {

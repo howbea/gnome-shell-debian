@@ -2,6 +2,9 @@
 
 StEntry {
   @extend %entry;
+  @if $variant == 'light' {
+    @extend %lentry;
+  }
 
   StIcon.capslock-warning {
     icon-size: $base_icon_size;

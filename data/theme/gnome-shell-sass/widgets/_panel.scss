@@ -3,7 +3,7 @@
 
 $privacy_indicator_color: $orange_3;
 
-$panel_bg_color: if($variant == 'light', $light_3, $dark_5);
+$panel_bg_color: if($variant == 'light', darken($light_1, 8%), $dark_5);
 $panel_fg_color: if($variant == 'light', $fg_color, darken($fg_color, 5%));
 $panel_border_color: if($variant == 'light', darken($panel_bg_color, 2%), $panel_bg_color);
 

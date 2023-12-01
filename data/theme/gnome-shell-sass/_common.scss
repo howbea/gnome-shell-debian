@@ -125,6 +125,18 @@ stage {
   }
 }
 
+%lentry {
+  @extend %entry_common;
+  @include entry(normal, $c:$bg_color);
+  &:hover { @include entry(hover, $c:$bg_color);}
+  &:focus { @include entry(focus, $c:$bg_color); color: $fg_color;}
+  &:insensitive { @include entry(insensitive, $c:$bg_color);}
+
+  StLabel.hint-text {
+    color: transparentize($fg_color, 0.3);
+  }
+}
+
 // buttons in dialogs/notifications
 // lighter in color and have a greater radius
 %bubble_button {

@@ -87,6 +87,58 @@ $app_icon_size: 96px;
   & .page-indicators {
     margin-bottom: 18px;
   }
+  
+    @if $variant == 'light' {
+  background-color: $bg_color;
+  	& .app-well-app {
+	  @include overview_icon(transparentize($system_bg_color, .05));
+
+ 	 .overview-icon {
+	    padding: $base_padding*2;
+	    border-radius: $base_border_radius*3;
+	    color: $fg_color;
+	  }
+	  .overview-icon.overview-icon-with-label {
+	    > StBoxLayout {
+	      spacing: $base_padding;
+	    }
+	  }
+	}
+
+ 	 & .folder-name-container {
+ 	   & .folder-name-label { padding: 5px 7px; color: $fg_color; } 	   
+ 	   }
+  
+	  & .page-indicators {
+		margin-bottom: 18px;
+	    .page-indicator-icon {
+ 	   background-color: mix($fg_color, $bg_color, $button_mix_factor);
+ 	 }
+  	}
+  	
+  	& .page-navigation-arrow {
+  	margin: 6px;
+  	padding: 18px;
+  	width: 24px;
+ 	 height: 24px;
+  	border-radius: 99px;
+
+ 	 > StIcon { color: $fg_color;}
+
+ 	 @if $is_highcontrast {
+ 	   @include button(normal, $system_fg_color, transparentize($system_bg_color, 0.5));
+ 	 }
+
+  	&:insensitive { @include button(undecorated, $system_fg_color, transparentize($system_bg_color, 0.5));> StIcon 	{ color: $system_fg_color;}}
+  	&:hover { @include button(hover, $system_fg_color, transparentize($system_bg_color, 0.5));> StIcon { color: $system_fg_color;}}
+  	&:active { @include button(active, $system_fg_color, transparentize($system_bg_color, 0.5));> StIcon { color: $system_fg_color;}}
+  	  }
+  	
+  	& .app-well-app-running-dot {
+	  background-color: mix($fg_color, $bg_color, $button_mix_factor);
+	}
+  	  
+	}
 }
 
 .app-folder-dialog-container {

@@ -113,6 +113,10 @@
       border-radius: 999px;
       padding: 1.5 * $base_padding;
       background-color: transparentize($fg_color, 0.8);
+      @if $variant == 'light' {
+      	border: 1px solid $borders_color;
+      	background-color: white;
+      	}
 
       &.active {
         background-color: $selected_bg_color;
